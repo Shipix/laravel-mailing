@@ -15,7 +15,7 @@ Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
 
-Route::get('/',[ControllerEmail::class,'index']);
+Route::get('/mail',[ControllerEmail::class,'index']);
 Route::post('/mail-send',[ControllerEmail::class,'store']);
 Auth::routes();
 
