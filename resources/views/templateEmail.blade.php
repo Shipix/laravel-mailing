@@ -1,1 +1,1 @@
-<h1>OKLM frerot</h1>
+<h1>{{$send->mail}}</h1>

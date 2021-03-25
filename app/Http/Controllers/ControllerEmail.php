@@ -13,7 +13,7 @@ class ControllerEmail extends Controller
     }
     public function store(Request $request){
         $Send = $request->mail;
-        Mail::to('shipix@hotmail.fr')->send(new MailSend($Send )); 
+        Mail::to('shipix@hotmail.fr')->send(new MailSend($request)); 
         return redirect()->back();
     }
 }
