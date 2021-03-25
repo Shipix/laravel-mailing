@@ -10,13 +10,13 @@ use Illuminate\Queue\SerializesModels;
 class MailSend extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $Send;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($Send)
     {
         //
     }
@@ -28,6 +28,6 @@ class MailSend extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->from('client@gmail.com')->view('templateEmail');
     }
 }

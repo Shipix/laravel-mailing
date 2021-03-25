@@ -16,3 +16,4 @@ Route::get('/home', function() {
 })->name('home')->middleware('auth');
 
 Route::get('/',[ControllerEmail::class,'index']);
+Route::post('/mail-send',[ControllerEmail::class,'store']);
