@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -17,3 +17,6 @@ Route::get('/home', function() {
 
 Route::get('/',[ControllerEmail::class,'index']);
 Route::post('/mail-send',[ControllerEmail::class,'store']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
